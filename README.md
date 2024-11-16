@@ -41,6 +41,7 @@ Follow these steps to get started
 3. Start the development server:
 
    ```bash
-  npm start dev
+  npm run dev
+
    ```
 
