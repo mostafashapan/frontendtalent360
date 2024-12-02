@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Set target to ES2020
+    "useDefineForClassFields": true, // Ensures proper handling of class field declarations
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Include the necessary libraries for DOM and ES2020
+    "module": "ESNext", // Use ESNext module system for modern module syntax
+    "skipLibCheck": true, // Skip type checking of declaration files (speeds up compilation)
+    
+    /* Bundler mode */
+    "moduleResolution": "bundler", // Ensure compatibility with bundlers like Vite/Webpack
+    "allowImportingTsExtensions": true, // Allow TypeScript extensions in imports
+    "resolveJsonModule": true, // Enable importing JSON files as modules
+    "isolatedModules": true, // Treat all files as isolated modules (useful for Babel/Vite)
+    "noEmit": true, // Disable output file generation (often used in a bundler context)
+    "jsx": "react-jsx", // Use the new JSX transform (React 17+)
+
+    /* Linting */
+    "strict": true, // Enable strict type-checking options
+    "noUnusedLocals": true, // Disallow unused variables
+    "noUnusedParameters": true, // Disallow unused function parameters
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough in switch statements
+
+    /* Paths */
+    "baseUrl": "./", // Set the base URL for module resolution
+    "paths": {
+      "@/*": ["src/*"] // Alias to simplify imports from the `src` folder
+    }
+  },
+  "include": ["src"], // Include all files in the `src` directory for type checking
+  "references": [{ "path": "./tsconfig.node.json" }] // Reference another config for node types (optional)
+}
