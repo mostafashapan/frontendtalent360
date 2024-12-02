@@ -12,6 +12,7 @@ import HRManager from './pages/HRManager';
 import About from './pages/About'
 
 import App from './App'; // Import the root layout component
+import HREmployess from './content/HREmployess';
 
 
 // Create the router configuration
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Dashboard /> // Dashboard page when the user is on the home route
+        element: <HREmployess /> // Dashboard page when the user is on the home route
       },
       {
         path: "/calender",
